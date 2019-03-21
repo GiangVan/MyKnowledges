@@ -14,7 +14,6 @@ namespace YourExperience
 {
     public partial class FormMain : Form
     {
-        const string releaseDate = "09:38 - 18/01/2019";
 
         //khai báo
         #region
