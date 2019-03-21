@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0673EE29-1B0C-4E5A-906F-8F908903EC8C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YourExperience</RootNamespace>
+    <AssemblyName>My Knowledges</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MyKnowledges.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormInfomation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfomation.Designer.cs">
+      <DependentUpon>FormInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoading.Designer.cs">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoading2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoading2.Designer.cs">
+      <DependentUpon>FormLoading2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuestion.Designer.cs">
+      <DependentUpon>FormQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetting.Designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Classes\AdvancedEncryptionStandard.cs" />
+    <Compile Include="Other Classes\Animation.cs" />
+    <Compile Include="Other Classes\DataFile.cs" />
+    <Compile Include="Other Classes\Dialogs.cs" />
+    <Compile Include="FormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdd.Designer.cs">
+      <DependentUpon>FormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditCmd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditCmd.Designer.cs">
+      <DependentUpon>FormEditCmd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFindAndReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFindAndReplace.Designer.cs">
+      <DependentUpon>FormFindAndReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLog.Designer.cs">
+      <DependentUpon>FormLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotification.Designer.cs">
+      <DependentUpon>FormNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPassword.Designer.cs">
+      <DependentUpon>FormPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Classes\ErrorFile.cs" />
+    <Compile Include="Other Classes\NetworkNodes.cs" />
+    <Compile Include="Other Classes\NodesEditingHistory.cs" />
+    <Compile Include="Other Classes\PanelCell.cs" />
+    <Compile Include="Other Classes\StopWatch.cs" />
+    <Compile Include="Other Classes\SystemFile.cs" />
+    <Compile Include="Other Classes\WindowsForm.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Other Classes\ShowComputer.cs" />
+    <Compile Include="Other Classes\Tag_of_Node.cs" />
+    <Compile Include="Other Classes\UnselectNode.cs" />
+    <EmbeddedResource Include="FormAdd.resx">
+      <DependentUpon>FormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCmd.resx">
+      <DependentUpon>FormEditCmd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFindAndReplace.resx">
+      <DependentUpon>FormFindAndReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInfomation.resx">
+      <DependentUpon>FormInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoading.resx">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoading2.resx">
+      <DependentUpon>FormLoading2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLog.aa-DJ.resx">
+      <DependentUpon>FormLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLog.resx">
+      <DependentUpon>FormLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotification.resx">
+      <DependentUpon>FormNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPassword.resx">
+      <DependentUpon>FormPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuestion.resx">
+      <DependentUpon>FormQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="links.ico" />
+    <Content Include="MyKnowledges.ico" />
+    <None Include="Resources\LoadingPage.gif" />
+    <None Include="Resources\links.png" />
+    <None Include="Resources\networking.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\open-folder-outline.png" />
+    <None Include="Resources\new-file.png" />
+    <None Include="Resources\undo-button.png" />
+    <None Include="Resources\edit-alignment-right-icon.png" />
+    <None Include="Resources\edit-alignment-center-icon.png" />
+    <None Include="Resources\edit-alignment-icon.png" />
+    <None Include="Resources\clear-icon-9211.png" />
+    <None Include="Resources\text-list-bullets-icon.png" />
+    <None Include="Resources\text-superscript-icon.png" />
+    <None Include="Resources\text-subscript-icon.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\checked1.png" />
+    <None Include="Resources\multiply.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\size.png" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\color-text.png" />
+    <None Include="Resources\cancel-music.png" />
+    <None Include="Resources\keyword.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\blind-eye-sign.png" />
+    <None Include="Resources\Arrow_bottom.png" />
+    <None Include="Resources\Arrow_top.png" />
+    <None Include="Resources\down-icon.png" />
+    <None Include="Resources\up-icon.png" />
+    <None Include="Resources\padlock-lock-icon %281%29.png" />
+    <None Include="Resources\padlock-unlock-icon %281%29.png" />
+    <None Include="Resources\align-left-64x64.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\Toggle.png" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\trash-icon.png" />
+    <None Include="Resources\Editing-Expand-icon.png" />
+    <None Include="Resources\add-icon.png" />
+    <None Include="Resources\Cursor-Move-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,17 @@
+
+WindowState=Normal
+Width=1219
+Height=763
+panelMid=966
+StartWithWindows=True
+TurboBoost=False
+ShowTime=False
+AutoLock=True
+FontOfTextBox=Segoe UI Semibold, 13pt, style=Bold
+FontOfTreeView=Segoe UI Semibold, 13pt, style=Bold
+AutoSave=False
+TimeSaved=15
+WordWrap=False
+customColorsBox_Red=255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,
+customColorsBox_Blue=255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,
+customColorsBox_Green=255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,

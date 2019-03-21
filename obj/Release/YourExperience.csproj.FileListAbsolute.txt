@@ -1,0 +1,74 @@
+E:\Winform C#\YourExperience\YourExperience\bin\Release\My Knowledge.exe.config
+E:\Winform C#\YourExperience\YourExperience\bin\Release\My Knowledge.exe
+E:\Winform C#\YourExperience\YourExperience\bin\Release\My Knowledge.pdb
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.csprojAssemblyReference.cache
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.FormAdd.resources
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.FormLoad.resources
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.FormMain.resources
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.Properties.Resources.resources
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.csproj.GenerateResource.cache
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.csproj.CoreCompileInputs.cache
+E:\Winform C#\YourExperience\YourExperience\obj\Release\My Knowledge.exe
+E:\Winform C#\YourExperience\YourExperience\obj\Release\My Knowledge.pdb
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.FormLogin.resources
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.FormNotification.resources
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.FormPassword.resources
+E:\Winform C#\YourExperience\YourExperience\bin\Release\aa-DJ\My Knowledge.resources.dll
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.FormFindAndReplace.resources
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.FormLog.resources
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.FormLog.aa-DJ.resources
+E:\Winform C#\YourExperience\YourExperience\obj\Release\aa-DJ\My Knowledge.resources.dll
+E:\Winform C#\YourExperience\YourExperience\bin\Release\mscorlib.dll
+E:\Winform C#\YourExperience\YourExperience\bin\Release\sortkey.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\sorttbls.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\big5.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\bopomofo.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\ksc.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\prc.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\prcp.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\xjis.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\normidna.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\normnfc.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\normnfd.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\normnfkc.nlp
+E:\Winform C#\YourExperience\YourExperience\bin\Release\normnfkd.nlp
+E:\Winform C#\YourExperience\YourExperience\obj\Release\YourExperience.csproj.CopyComplete
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\mscorlib.dll
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\sortkey.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\sorttbls.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\big5.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\bopomofo.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\ksc.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\prc.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\prcp.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\xjis.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\normidna.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\normnfc.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\normnfd.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\normnfkc.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\normnfkd.nlp
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.csprojAssemblyReference.cache
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormAdd.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormFindAndReplace.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormLog.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormMain.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormNotification.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormPassword.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.Properties.Resources.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormLog.aa-DJ.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.csproj.GenerateResource.cache
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.csproj.CopyComplete
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormEditCmd.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\My Knowledges.exe.config
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\My Knowledges.exe
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\My Knowledges.pdb
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release\aa-DJ\My Knowledges.resources.dll
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\aa-DJ\My Knowledges.resources.dll
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\My Knowledges.exe
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\My Knowledges.pdb
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormInfomation.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormLoading.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormLoading2.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormQuestion.resources
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\obj\Release\YourExperience.FormSetting.resources

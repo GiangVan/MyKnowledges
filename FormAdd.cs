@@ -5,55 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using YourExperience.OtherClasses;
 
 namespace YourExperience
 {
 	public partial class FormAdd : Form
 	{
-        private const string leftCode = "!2||-@#(";
-        private const string rightCode = ")#@-||2!";
-        private const string nameCode = "!2||-@#x";//dùng để nhận biết TreeRoot
-        private const string lockCode = "!2||-@#l";
-        private const string nodesCode = "!2||-@#ns";
-        private const string pathCode = "!2||-@#p";//được sử dụng để phân tách giữa Content với Path trong một TreeNode.Name khi TreeNode.Name được unlock
+        Point moveFormWithMouse;
+        string nameOfNode;
+        string returner;
 
-        internal bool button = false;// false = nhấn nút Cancel, true = nhấn nút Ok
-		private TreeNode root;
-        private string nameOfNode = "";
-
-        public FormAdd(Point location, TreeNode root)
-		{
-			InitializeComponent();
-			Left = location.X - 108;
-			Top = location.Y - 14;
-			this.root = root;
-			ShowDialog();
-		}
-
-		public FormAdd(Point location, TreeNode root, string nameOfNode)
-		{
-			InitializeComponent();
-			Left = location.X - 108;
-			Top = location.Y - 14;
-			Text = "Rename: " + nameOfNode;
-            this.nameOfNode = nameOfNode;
-            this.root = root;
-			textBox1.Text = nameOfNode;
-			textBox1.SelectAll();
-			ShowDialog();
-		}
-        private bool CheckSpecialCharacter(string specialCharacter)
+        public FormAdd()
         {
-            if (!textBox1.Text.Contains(specialCharacter))
-                return false;
-            new FormNotification("Not allowed use: \n\"" + specialCharacter + "\"", false);
-            //bôi đen đoạn chuỗi đặc biệt đó
-            textBox1.SelectionStart = textBox1.Text.IndexOf(specialCharacter);
-            textBox1.SelectionLength = specialCharacter.Length;
-            //click vào control textBoxContent
-            textBox1.ScrollToCaret();
-            textBox1.Select();
-            return true;
+            InitializeComponent();
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
@@ -61,50 +25,113 @@ namespace YourExperience
 			#region Kiểm tra các lỗi cú pháp.
 			if (textBox1.Text.Replace(" ", "") == "")
 			{
-                new FormNotification("Empty name!", false);
+                WindowsForm.Notification.Show(MessageBoxButtons.OK, "Empty name!", this);
                 textBox1.Text = "";
                 textBox1.Select();
 				return;
 			}
-			foreach (TreeNode i in root.Nodes)
-			{
-                if (textBox1.Text == i.Text && nameOfNode != textBox1.Text)
-                {
-                    new FormNotification("Namesake!", false);
-                    textBox1.SelectAll();
-                    textBox1.Select();
-                    return;
-                }
-            }
-            if (CheckSpecialCharacter(nodesCode) || CheckSpecialCharacter(pathCode) || CheckSpecialCharacter(leftCode) || CheckSpecialCharacter(lockCode) || CheckSpecialCharacter(nameCode) || CheckSpecialCharacter(rightCode))
-                return;
             #endregion
-            Text = textBox1.Text;
-			button = true;
-			Close();
+            returner = textBox1.Text;
+            panel1.MouseMove -= panel1_MouseMove;
+            Hide();
 		}
 
-		private void buttonCancel_Click(object sender, EventArgs e)
+        //show
+        #region
+        //chỉnh sửa node cũ
+        public string Show(string name, Color color)
+        {
+            if(name != null && name.Length > 0)
+                nameOfNode = name;
+            else
+                nameOfNode = "";
+            buttonColor.BackColor = color;
+            textBox1.Text = name;
+            Left = MousePosition.X - 15;
+            Top = MousePosition.Y - 7;
+            textBox1.SelectAll();
+            textBox1.Select();
+            comboBox1.SelectedIndex = -1;
+            new Animation(this);
+            ShowDialog();
+            return returner;
+        }
+        //tạo mới node
+        new public string Show()
+        {
+            nameOfNode = "";
+            textBox1.Text = "";
+            comboBox1.SelectedIndex = -1;
+            buttonColor.BackColor = Color.DimGray;
+            Left = MousePosition.X - 15;
+            Top = MousePosition.Y - 7;
+            textBox1.SelectAll();
+            textBox1.Select();
+            new Animation(this);
+            ShowDialog();
+            return returner;
+        }
+        #endregion
+
+        private void buttonCancel_Click(object sender, EventArgs e)
 		{
-			Close();
+            returner = null;
+            panel1.MouseMove -= panel1_MouseMove;
+            Hide();
 		}
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem.ToString() == "Get date") textBox1.Text = DateTime.Now.ToShortDateString();
-            if (comboBox1.SelectedItem.ToString() == "Get time") textBox1.Text = DateTime.Now.ToLongTimeString();
-            if (comboBox1.SelectedItem.ToString() == "Get date time") textBox1.Text = DateTime.Now.ToLongTimeString() + " - " + DateTime.Now.DayOfWeek + ", " + DateTime.Now.ToLongDateString();
-            if (comboBox1.SelectedItem.ToString() == "Get day of week") textBox1.Text = DateTime.Now.DayOfWeek.ToString();
-            if (comboBox1.SelectedItem.ToString() == "Revert") textBox1.Text = nameOfNode;
+            if (comboBox1.SelectedIndex == 1) textBox1.Text = DateTime.Now.ToShortDateString();
+            if (comboBox1.SelectedIndex == 0) textBox1.Text = DateTime.Now.ToLongTimeString();
+            if (comboBox1.SelectedIndex == 2) textBox1.Text = DateTime.Now.ToLongTimeString() + " - " + DateTime.Now.ToLongDateString();
+            if (comboBox1.SelectedIndex == 3) textBox1.Text = DateTime.Now.DayOfWeek.ToString();
+            if (comboBox1.SelectedIndex == 4 && !string.IsNullOrEmpty(nameOfNode)) textBox1.Text = nameOfNode;
             textBox1.Select();
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && e.KeyCode == Keys.C)
-                if(textBox1.TextLength > 0) Clipboard.SetText(textBox1.Text);
-            if (e.Control && e.KeyCode == Keys.A)
-                textBox1.SelectAll();
+            if (e.Control)
+            {
+                if (e.KeyCode == Keys.D2) textBox1.Text = DateTime.Now.ToShortDateString();
+                if (e.KeyCode == Keys.D1) textBox1.Text = DateTime.Now.ToLongTimeString();
+                if (e.KeyCode == Keys.D3) textBox1.Text = DateTime.Now.ToLongTimeString() + " - " + DateTime.Now.ToLongDateString();
+                if (e.KeyCode == Keys.D4) textBox1.Text = DateTime.Now.DayOfWeek.ToString();
+                if (e.KeyCode == Keys.D5 && !string.IsNullOrEmpty(nameOfNode)) textBox1.Text = nameOfNode;
+                textBox1.Focus();
+                textBox1.Select(textBox1.TextLength, 0);
+                if (e.KeyCode == Keys.A) textBox1.SelectAll();
+            }
+        }
+
+        //di chuyển form theo chuột
+        #region
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            panel1.MouseMove += panel1_MouseMove;
+            moveFormWithMouse = new Point(MousePosition.X - Location.X, MousePosition.Y - Location.Y);
+        }
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            panel1.MouseMove -= panel1_MouseMove;
+        }
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!(moveFormWithMouse == Location))
+            {
+                Location = new Point(MousePosition.X - moveFormWithMouse.X, MousePosition.Y - moveFormWithMouse.Y);
+            }
+        }
+        #endregion
+
+        private void buttonColor_Click(object sender, EventArgs e)
+        {
+            object obj = Dialogs.ShowColorDialog(buttonColor.BackColor, true);
+            if(obj != null)
+            {
+                buttonColor.BackColor = (Color)obj;
+            }
         }
     }
 }
