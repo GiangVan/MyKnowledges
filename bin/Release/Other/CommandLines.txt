@@ -34,6 +34,10 @@ github
 https://github.com/login
 
 
+dropbox
+https://www.dropbox.com/
+
+
 showtime
 C:\Users\Acer\Documents\Project C# .NET Applications\ShowTime\ShowTime\ShowTime.sln
 
@@ -54,8 +58,8 @@ duolingo
 https://www.duolingo.com/
 
 
-dropbox
-https://www.dropbox.com/
+opencurrentfolder
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release
 
 
 bbc
@@ -78,16 +82,12 @@ translate
 https://translate.google.com/#view=home&op=translate&sl=en&tl=vi&text=
 
 
-ConsoleTest
-C:\Users\Acer\Documents\Project C# .NET Applications\ConsoleTest\ConsoleTest.sln
-
-
 documents
 C:\Users\Acer\Documents
 
 
-opencurrentfolder
-C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release
+ConsoleTest
+C:\Users\Acer\Documents\Project C# .NET Applications\ConsoleTest\ConsoleTest.sln
 
 
 history

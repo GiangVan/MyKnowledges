@@ -39,15 +39,12 @@ namespace YourExperience
 
         void Log()//giải mã và nạp dữ liệu
         {
-            //giải mã nội dung
             WindowsForm.Loading2.Show(this);
-            byte[] pass = AdvancedEncryptionStandard.Hash(password);
-            string str = AdvancedEncryptionStandard.Decoding(Encoding.Default.GetBytes(node.Name), pass);
-            //if(str.Substring(NetworkNodes.checkingCode.Length) == "\u0010ÛâÈ r”r']{0S‡J%\u008dPm\b\u000eAáÁ\t\u0017í+¬*‡„")
-            //    MessageBox.Show("");
-            if (NetworkNodes.CheckPassword(str))
+            byte[] pass = AdvancedEncryptionStandard.Hash(password);//chuyển pass sang hashcode
+            string str = AdvancedEncryptionStandard.Decoding(Encoding.Default.GetBytes(node.Name), pass);//giải mã
+            if (NetworkNodes.CheckPassword(str))//kiểm tra nếu đúng thì...
             {
-                node.Name = str.Substring(NetworkNodes.checkingCode.Length);
+                node.Name = str.Substring(NetworkNodes.checkingCode.Length);//loại bỏ đoạn mã dùng để nhận biết nhập đúng pâss trong str
                 try
                 {
                     //giải mã và nạp các nodes con

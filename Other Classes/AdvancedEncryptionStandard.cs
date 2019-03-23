@@ -9,7 +9,7 @@ namespace YourExperience
 
         public static byte[] Hash(byte[] password)
         {
-            Rfc2898DeriveBytes hash = new Rfc2898DeriveBytes(password, salt, 90000);
+            Rfc2898DeriveBytes hash = new Rfc2898DeriveBytes(password, salt, 30000);
             return hash.GetBytes(32);
         }
 

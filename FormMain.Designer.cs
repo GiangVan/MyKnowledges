@@ -665,7 +665,7 @@
             this.findCtrlFToolStripMenuItem,
             this.runTheTextToolStripMenuItem});
             this.contextMenuStrip_textBoxContent.Name = "contextMenuStrip";
-            this.contextMenuStrip_textBoxContent.Size = new System.Drawing.Size(273, 430);
+            this.contextMenuStrip_textBoxContent.Size = new System.Drawing.Size(273, 452);
             // 
             // editContentF3ToolStripMenuItem
             // 

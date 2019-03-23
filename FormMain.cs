@@ -970,6 +970,7 @@ namespace YourExperience
         //double click vào một node đang khoá thì mở form đăng nhập
         private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            if(treeView.SelectedNode == null) return;
             clickToTreeNode = true;
             if (((Tag_of_Node)treeView.SelectedNode.Tag).is_lockNode && !((Tag_of_Node)treeView.SelectedNode.Tag).unlocked) UnlockTheNode();
             else if (WindowsForm.Setting.checkBox__Automatically_open_editing_when_double_click_to_a_node.Checked && (treeView.SelectedNode.Nodes == null || treeView.SelectedNode.Nodes.Count == 0))
@@ -999,46 +1000,6 @@ namespace YourExperience
                 NodesEditingHistory.Add(treeView.SelectedNode, true);
                 treeView.SelectedNode.Expand();
             }
-
-            #region
-            //using (FormLog formLog = new FormLog("Unlocking"))
-            //{
-            //    if (formLog.GetPass() != null && formLog.is_Enter)
-            //    {
-            //        //giải mã
-            //        string data = Encoding.Unicode.GetString(GCoding.Decoding(((Tag_of_a_Node)treeView.SelectedNode.Tag).bytes, formLog.GetPass()));
-            //        if (data.Contains(passCode))//nếu nhập đúng password
-            //        {
-            //            data = data.Substring(passCode.Length);//data lúc này chứa: text_content + nodesCode + text_nodes
-            //            text_nodes = data.Substring(data.IndexOf(nodesCode) + nodesCode.Length);
-            //            //Nạp các TreeNodes cho TreeNode đó
-            //            int index = -leftCode.Length;
-            //            while (true)
-            //            {
-            //                index += leftCode.Length;
-            //                if (index == text_nodes.Length - 1 || text_nodes.Substring(index).IndexOf(rightCode) == 0)
-            //                    break;
-            //                index = AddTreeNode(treeView.SelectedNode, index);//đệ quy
-            //            }
-            //            treeView.SelectedNode.Expand();
-            //            //hiển thị text_content của TreeNode
-            //            data = data.Substring(0, data.IndexOf(nodesCode));
-            //            ((Tag_of_a_Node)treeView.SelectedNode.Tag).date = data.Substring(data.LastIndexOf(dateCode) + dateCode.Length, data.LastIndexOf(fontSizeCode) - data.LastIndexOf(dateCode) - dateCode.Length);
-            //            ((Tag_of_a_Node)treeView.SelectedNode.Tag).zoomFactor = float.Parse(data.Substring(data.LastIndexOf(fontSizeCode) + fontSizeCode.Length));
-            //            data = data.Substring(0, data.LastIndexOf(dateCode));
-            //            //đặt lại thuộc tính Name cho TreeNode
-            //            treeView.SelectedNode.Name = data + pathCode + treeView.SelectedNode.Name.Substring(0, treeView.SelectedNode.Name.IndexOf(lockCode) + lockCode.Length) + Encoding.Default.GetString(formLog.GetPass());
-            //            ((Tag_of_a_Node)treeView.SelectedNode.Tag).bytes = null; //không biết đặt null để làm gì
-            //            //show
-            //            textBoxContent.Rtf = data;
-            //            textBoxContent.ZoomFactor = ((Tag_of_a_Node)treeView.SelectedNode.Tag).zoomFactor;
-            //            trackBarZoomFactor.Value = (int)(textBoxContent.ZoomFactor * 1000);
-            //        }
-            //        else
-            //            WindowsForm.Notification.Show(MessageBoxButtons.OK, "Wrong password!");
-            //    }
-            //}
-            #endregion
         }
         void LockTheNode()
         {
@@ -2757,10 +2718,20 @@ namespace YourExperience
         {
             WindowsForm.Setting.Show(this);
             //cập nhật lại fonts
-            textBoxContent.Font = WindowsForm.Setting.button__TextBox.Font;
-            treeView.Font = WindowsForm.Setting.button__TreeView.Font;
-            if (treeView.SelectedNode != null)
-                ShowTreeNodeContent(treeView.SelectedNode);
+            if (textBoxContent.ReadOnly)
+            {
+                string str = textBoxContent.Rtf;
+                textBoxContent.Font = WindowsForm.Setting.button__TextBox.Font;
+                treeView.Font = WindowsForm.Setting.button__TreeView.Font;
+                textBoxContent.Rtf = str;
+            }
+            else
+            {
+                textBoxContent.Font = WindowsForm.Setting.button__TextBox.Font;
+                treeView.Font = WindowsForm.Setting.button__TreeView.Font;
+                if (treeView.SelectedNode != null)
+                    ShowTreeNodeContent(treeView.SelectedNode);
+            }
         }
         #endregion
 
