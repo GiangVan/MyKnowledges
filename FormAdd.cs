@@ -99,9 +99,12 @@ namespace YourExperience
                 if (e.KeyCode == Keys.D3) textBox1.Text = DateTime.Now.ToLongTimeString() + " - " + DateTime.Now.ToLongDateString();
                 if (e.KeyCode == Keys.D4) textBox1.Text = DateTime.Now.DayOfWeek.ToString();
                 if (e.KeyCode == Keys.D5 && !string.IsNullOrEmpty(nameOfNode)) textBox1.Text = nameOfNode;
-                textBox1.Focus();
-                textBox1.Select(textBox1.TextLength, 0);
                 if (e.KeyCode == Keys.A) textBox1.SelectAll();
+                if (e.KeyValue != 17 && e.KeyCode == Keys.C && e.KeyCode == Keys.X)
+                {
+                    textBox1.Focus();
+                    textBox1.Select(textBox1.TextLength, 0);
+                }
             }
         }
 

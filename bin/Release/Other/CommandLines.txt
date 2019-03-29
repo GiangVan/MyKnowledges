@@ -26,6 +26,10 @@ drive
 https://drive.google.com/drive/u/0/my-drive
 
 
+translate
+https://translate.google.com/#view=home&op=translate&sl=en&tl=vi&text=
+
+
 ted
 https://www.ted.com/talks
 
@@ -70,6 +74,10 @@ tophonetics
 https://tophonetics.com/
 
 
+web
+C:\Users\Acer\Documents\Web Applications\QuanLyVeMayBay\Airline_Management.sln
+
+
 facebook
 https://www.facebook.com/
 
@@ -78,8 +86,8 @@ gmail
 https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin
 
 
-translate
-https://translate.google.com/#view=home&op=translate&sl=en&tl=vi&text=
+addons
+C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
 
 
 documents
@@ -96,6 +104,10 @@ C:\Users\Acer\AppData\Local\Microsoft\Windows\History
 
 imagesearch
 https://www.google.com.vn/search?authuser=0&q=
+
+
+windowsformstest
+C:\Users\Acer\Documents\Project C# .NET Applications\WindowsFormsTest\WindowsFormsTest.sln
 
 
 email

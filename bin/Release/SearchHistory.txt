@@ -41,3 +41,8 @@ steam overlay
 maps//tiên giang
 translate//inventỏy
 zalo
+windowsformstest
+web
+translate//genius
+addons
+translate//lybrary

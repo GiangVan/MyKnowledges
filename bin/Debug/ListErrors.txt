@@ -24,3 +24,125 @@ File name: 'C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\
    at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 34
    at YourExperience.FormMain.FormMain_Shown(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 92
 
+29/03/2019 23:57:16:
+System.ArgumentException: Illegal characters in path.
+   at System.IO.Path.CheckInvalidPathChars(String path)
+   at System.IO.Path.GetFileName(String path)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 34
+   at YourExperience.FormMain.toolStripMenuItem6_Click(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 1151
+
+30/03/2019 00:12:38:
+System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at YourExperience.OtherClasses.NetworkNodes.Recursive_ToTreeNode(TreeNode node) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 96
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 62
+   at YourExperience.FormMain.toolStripMenuItem6_Click(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 1152
+
+30/03/2019 00:12:50:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at YourExperience.FormMain.ShowTreeNodeContent(TreeNode node) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 2557
+   at YourExperience.FormMain.treeView_NodeMouseClick(Object sender, TreeNodeMouseClickEventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 397
+   at System.Windows.Forms.TreeView.WmNotify(Message& m)
+   at System.Windows.Forms.TreeView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   at System.Windows.Forms.Control.WmNotify(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   at System.Windows.Forms.TreeView.WmMouseDown(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.TreeView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(Int32 dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at YourExperience.Program.Main() in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Program.cs:line 19
+
+30/03/2019 00:15:30:
+System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at YourExperience.OtherClasses.NetworkNodes.Recursive_ToTreeNode(TreeNode node) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 74
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 62
+   at YourExperience.FormMain.toolStripMenuItem6_Click(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 1152
+
+30/03/2019 00:17:41:
+System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at YourExperience.OtherClasses.NetworkNodes.Recursive_ToTreeNode(TreeNode node) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 96
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 62
+   at YourExperience.FormMain.toolStripMenuItem6_Click(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 1152
+
+30/03/2019 00:20:00:
+System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at YourExperience.OtherClasses.NetworkNodes.Recursive_ToTreeNode(TreeNode node) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 96
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 62
+   at YourExperience.FormMain.toolStripMenuItem6_Click(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 1168
+   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   at System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.ToolStripDropDown.OnMouseUp(MouseEventArgs mea)
+   at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   at System.Windows.Forms.ToolStripDropDown.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(Int32 dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at YourExperience.Program.Main() in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Program.cs:line 19
+
+30/03/2019 00:45:28:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 61
+   at YourExperience.FormLog.Log() in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormLog.cs:line 51
+
+30/03/2019 00:48:49:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 61
+   at YourExperience.FormLog.Log() in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormLog.cs:line 51
+
+30/03/2019 00:51:03:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 61
+   at YourExperience.FormLog.Log() in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormLog.cs:line 51
+
+30/03/2019 00:52:55:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 61
+   at YourExperience.FormLog.Log() in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormLog.cs:line 51
+
+30/03/2019 00:57:47:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 61
+   at YourExperience.FormLog.Log() in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormLog.cs:line 52
+
+30/03/2019 00:59:01:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 61
+   at YourExperience.FormLog.Log() in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormLog.cs:line 52
+
+30/03/2019 01:00:14:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeNode node, String data) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 61
+   at YourExperience.FormLog.Log() in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormLog.cs:line 51
+

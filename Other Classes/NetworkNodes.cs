@@ -33,6 +33,7 @@ namespace YourExperience.OtherClasses
             n = 0;
             nodesString = File.ReadAllText(path);
             index = nodesString.IndexOf(@"\") + 1;
+
             //xoá các nodes cũ
             treeView.Nodes.Clear();
             

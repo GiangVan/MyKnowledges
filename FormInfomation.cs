@@ -62,5 +62,10 @@ namespace YourExperience
             }
         }
         #endregion
+
+        private void FormInfomation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,10 +14,7 @@ namespace YourExperience
         [STAThread]
 		static void Main()
 		{
-			Application.SetCompatibleTextRenderingDefault(false);
-
             //Application.Run(new FormMain());
-
             try
             {
                 Application.Run(new FormMain());

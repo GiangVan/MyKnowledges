@@ -1148,7 +1148,13 @@ namespace YourExperience
             //Nạp các TreeNodes cho TreeNode đó
             try
             {
-                NetworkNodes.Create(treeView, Clipboard.GetText());
+                TreeNode newNode = new TreeNode();
+                NetworkNodes.Create(newNode, Clipboard.GetText());
+                foreach (TreeNode item in newNode.Nodes)
+                {
+                    treeView.Nodes.Add(item);
+                    treeView.SelectedNode = item;
+                }
             }
             catch (Exception ex)
             {
@@ -1181,6 +1187,10 @@ namespace YourExperience
             try
             {
                 Clipboard.SetText(NetworkNodes.Recursive_ToString_2(treeView.SelectedNode));
+                if(Clipboard.GetText().Length > 4 && Clipboard.GetText().Substring(Clipboard.GetText().Length - 3) != @" \e")
+                {
+                    Clipboard.SetText(Clipboard.GetText() + @" \e");
+                }
             }
             catch (Exception ex)
             {
@@ -1465,7 +1475,7 @@ namespace YourExperience
                     //                                                                  - Ctrl + 2
                     if (e.KeyCode == Keys.D2)
                     {
-                        TextBoxContent_Paste(DateTime.Now.ToShortDateString());
+                        dateToolStripMenuItem_Click(null,null);
                     }
                     //                                                                  - Ctrl + 3
                     if (e.KeyCode == Keys.D3)
@@ -1764,7 +1774,7 @@ namespace YourExperience
         //Date
         private void dateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TextBoxContent_Paste(DateTime.Now.ToShortDateString());
+            TextBoxContent_Paste(DateTime.Now.Day+"//"+DateTime.Now.Month+"//"+DateTime.Now.Year);
         }
         //Day of Week
         private void dayOfWeekToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1889,19 +1899,10 @@ namespace YourExperience
             if (!string.IsNullOrEmpty(path))
             {
                 timerAutoSave.Enabled = false;
-                if (!textBoxContent.ReadOnly)
+                if (textBoxContent.ReadOnly)
                 {
-                    if (WindowsForm.Question.Show("Do you want to save?", this) == DialogResult.Yes)
-                    {
-                        buttonSave_Click(null, null);
-                        if (NodesEditingHistory.Check())
-                        {
-                            SaveTreeView();
-                        }
-                    }
-                }
-                else
                     SaveTreeView();
+                }
                 timerAutoSave.Enabled = true;
             }
         }
@@ -2555,30 +2556,33 @@ namespace YourExperience
         #region
         private void ShowTreeNodeContent(TreeNode node)
         {
-            if (node.Tag == null) node.Tag = new Tag_of_Node();
-            //nếu là node đang khoá
-            if (((Tag_of_Node)node.Tag).is_lockNode && !((Tag_of_Node)node.Tag).unlocked)
+            if(node != null)
             {
-                textBoxContent.Text = "";
-                pictureBoxLock.Visible = true;
-            }
-            //nếu là node bình thường hoặc node đang mở
-            else
-            {
-                textBoxContent.Rtf = node.Name;
-                if (pictureBoxLock.Visible) pictureBoxLock.Visible = false;
-            }
-            //gán ZoomFactor
-            if (WindowsForm.Setting.checkBox__Automatically_save_zoomfactor_of_the_node_when_transfer_to_another_nodes.Checked)
-                textBoxContent.ZoomFactor = ((Tag_of_Node)node.Tag).zoomFactor;
-            else
-                textBoxContent.ZoomFactor = 1f;
-            trackBarZoomFactor.Value = (int)(textBoxContent.ZoomFactor * 1000);
-            //gán SelectionText
-            if (WindowsForm.Setting.checkBox__Automatically_save_the_selected_text_of_the_node_when_transfer_to_another_nodes.Checked && ((Tag_of_Node)node.Tag).SelecionStart != -1)
-            {
-                textBoxContent.SelectionStart = ((Tag_of_Node)node.Tag).SelecionStart;
-                textBoxContent.SelectionLength = ((Tag_of_Node)node.Tag).SelectionLength;
+                if (node.Tag == null) node.Tag = new Tag_of_Node();
+                //nếu là node đang khoá
+                if (((Tag_of_Node)node.Tag).is_lockNode && !((Tag_of_Node)node.Tag).unlocked)
+                {
+                    textBoxContent.Text = "";
+                    pictureBoxLock.Visible = true;
+                }
+                //nếu là node bình thường hoặc node đang mở
+                else
+                {
+                    textBoxContent.Rtf = node.Name;
+                    if (pictureBoxLock.Visible) pictureBoxLock.Visible = false;
+                }
+                //gán ZoomFactor
+                if (WindowsForm.Setting.checkBox__Automatically_save_zoomfactor_of_the_node_when_transfer_to_another_nodes.Checked)
+                    textBoxContent.ZoomFactor = ((Tag_of_Node)node.Tag).zoomFactor;
+                else
+                    textBoxContent.ZoomFactor = 1f;
+                trackBarZoomFactor.Value = (int)(textBoxContent.ZoomFactor * 1000);
+                //gán SelectionText
+                if (WindowsForm.Setting.checkBox__Automatically_save_the_selected_text_of_the_node_when_transfer_to_another_nodes.Checked && ((Tag_of_Node)node.Tag).SelecionStart != -1)
+                {
+                    textBoxContent.SelectionStart = ((Tag_of_Node)node.Tag).SelecionStart;
+                    textBoxContent.SelectionLength = ((Tag_of_Node)node.Tag).SelectionLength;
+                }
             }
         }
         #endregion

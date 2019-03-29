@@ -198,7 +198,7 @@
             this.deleteToolStripMenuItem,
             this.Date_toolStripMenuItem});
             this.contextMenuStrip_TreeNode.Name = "contextMenuStrip";
-            this.contextMenuStrip_TreeNode.Size = new System.Drawing.Size(271, 556);
+            this.contextMenuStrip_TreeNode.Size = new System.Drawing.Size(271, 578);
             // 
             // newToolStripMenuItem
             // 
@@ -665,7 +665,7 @@
             this.findCtrlFToolStripMenuItem,
             this.runTheTextToolStripMenuItem});
             this.contextMenuStrip_textBoxContent.Name = "contextMenuStrip";
-            this.contextMenuStrip_textBoxContent.Size = new System.Drawing.Size(273, 452);
+            this.contextMenuStrip_textBoxContent.Size = new System.Drawing.Size(273, 430);
             // 
             // editContentF3ToolStripMenuItem
             // 
@@ -857,7 +857,6 @@
             // 
             this.panelEditingTool.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelEditingTool.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelEditingTool.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelEditingTool.Controls.Add(this.buttonAlignRight);
             this.panelEditingTool.Controls.Add(this.buttonAlignCenter);
@@ -883,7 +882,6 @@
             this.panelEditingTool.Controls.Add(this.comboBoxFont_textBoxContent);
             this.panelEditingTool.Controls.Add(this.buttonCancel);
             this.panelEditingTool.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.panelEditingTool.ForeColor = System.Drawing.Color.DimGray;
             this.panelEditingTool.Location = new System.Drawing.Point(0, 30);
             this.panelEditingTool.Name = "panelEditingTool";
             this.panelEditingTool.Size = new System.Drawing.Size(848, 57);
@@ -1019,7 +1017,6 @@
             this.buttonSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.buttonSave.ForeColor = System.Drawing.Color.DimGray;
             this.buttonSave.Image = global::YourExperience.Properties.Resources.checked1;
             this.buttonSave.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.buttonSave.Location = new System.Drawing.Point(6, 27);
@@ -1132,7 +1129,7 @@
             // 
             this.numericUpDownFont.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numericUpDownFont.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.numericUpDownFont.Location = new System.Drawing.Point(364, 3);
+            this.numericUpDownFont.Location = new System.Drawing.Point(365, 3);
             this.numericUpDownFont.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -1227,7 +1224,6 @@
             this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.buttonCancel.ForeColor = System.Drawing.Color.DimGray;
             this.buttonCancel.Image = global::YourExperience.Properties.Resources.multiply;
             this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.buttonCancel.Location = new System.Drawing.Point(6, 2);
@@ -1259,6 +1255,7 @@
             // comboBox2
             // 
             this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
             this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox2.FormattingEnabled = true;
@@ -1321,7 +1318,6 @@
             // 
             this.panel_treeView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_treeView.BackColor = System.Drawing.Color.Gainsboro;
             this.panel_treeView.Controls.Add(this.treeView);
             this.panel_treeView.Location = new System.Drawing.Point(887, 0);
             this.panel_treeView.Name = "panel_treeView";
@@ -1503,6 +1499,7 @@
             this.Controls.Add(this.menuStrip);
             this.Enabled = false;
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.ForeColor = System.Drawing.Color.DimGray;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

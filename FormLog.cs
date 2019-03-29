@@ -54,6 +54,10 @@ namespace YourExperience
                 {
                     WindowsForm.Loading2.End();
                     WindowsForm.Notification.Show(MessageBoxButtons.OK, "Can not create a TreeNode from the string!", ex, this);
+                    returner = true;
+                    panel1.MouseMove -= panel1_MouseMove;
+                    Hide();
+                    return;
                 }
                 WindowsForm.Loading2.End();
                 ((Tag_of_Node)node.Tag).password = pass;
