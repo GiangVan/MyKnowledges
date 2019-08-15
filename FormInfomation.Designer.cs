@@ -203,7 +203,7 @@
             this.labelVersion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelVersion.Size = new System.Drawing.Size(233, 32);
             this.labelVersion.TabIndex = 17;
-            this.labelVersion.Text = "v2.0.0.0 beta";
+            this.labelVersion.Text = "v2.0.0.0 alpha";
             // 
             // label9
             // 
@@ -239,7 +239,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 23;
-            this.label5.Text = "29/03/2019";
+            this.label5.Text = "22/07/2019";
             // 
             // FormInfomation
             // 

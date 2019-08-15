@@ -12,12 +12,17 @@ namespace YourExperience
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-		static void Main()
+		static void Main(string[] args)
 		{
             //Application.Run(new FormMain());
             try
             {
-                Application.Run(new FormMain());
+                if(args.Length > 0)
+                {
+                    Application.Run(new FormMain(args[0]));
+                }
+                else
+                    Application.Run(new FormMain(null));
             }
             catch (Exception ex)
             {

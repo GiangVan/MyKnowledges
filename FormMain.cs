@@ -58,8 +58,9 @@ namespace YourExperience
 
         //constructor
         #region constructor
-        public FormMain()
+        public FormMain(string path)
         {
+            this.path = path;
             //Process.Start(Directory.GetCurrentDirectory());
             InitializeComponent();
             WindowsForm.Setting.ChangeTimerAutoSave_FormMain = ChangeTimerAutoSave;
@@ -82,18 +83,20 @@ namespace YourExperience
             //khởi tạo FormFindAndReplace
             FormFindAndReplace = new FormFindAndReplace(textBoxContent, this);
 
-            //tự động mở file
+            //tự động mở file khi mở chương trình
+            if(path == null && WindowsForm.Setting.checkBox__Automatically_open_file_when_this_application_start.Checked)
+            {
+                path = SystemFile.Get(2);
+            }
+            //nạp network node
             try
             {
-                string str = SystemFile.Get(2);
-                if (WindowsForm.Setting.checkBox__Automatically_open_file_when_this_application_start.Checked && !string.IsNullOrEmpty(str))
+                if (!string.IsNullOrEmpty(path))
                 {
-                    NetworkNodes.Create(treeView, str);
-                    path = str;
+                    NetworkNodes.Create(treeView, path);
                     textBoxContent.Select();
                 }
-                else
-                    Activate();
+                Activate();
             }
             catch (Exception ex)
             {
@@ -278,13 +281,33 @@ namespace YourExperience
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!textBoxContent.ReadOnly) buttonSave_Click(null, null);
+            // nếu có thay đổi dữ liệu
             if (NodesEditingHistory.Check() && (!string.IsNullOrEmpty(path) || treeView.GetNodeCount(true) > 0))
             {
+                // nếu là file mở sẵn
                 if (!string.IsNullOrEmpty(path))
                 {
-                    Visible = false;
-                    NetworkNodes.SaveAll(treeView, path);
+                    // hỏi người dùng có muốn lưu dữ liệu
+                    if(WindowsForm.Question.Show("Save?", this) == DialogResult.Yes)
+                    {
+                        Visible = false;
+                        NetworkNodes.SaveAll(treeView, path);
+                    }
+                    else
+                    {
+                        if (WindowsForm.Question.Show("Are you sure?", this) == DialogResult.No)
+                        {
+                            e.Cancel = true;
+                            return;
+                        }
+                        else
+                        {
+                            // thoát chương trình và không lưu
+                            Application.ExitThread();
+                        }
+                    }
                 }
+                // nếu là file mới tạo
                 //nếu người dùng không muốn lưu current file
                 else if (WindowsForm.Question.Show("Save the current file?", this) == DialogResult.No)
                 {
@@ -1155,6 +1178,7 @@ namespace YourExperience
                     treeView.Nodes.Add(item);
                     treeView.SelectedNode = item;
                 }
+                NodesEditingHistory.Add(newNode, true);
             }
             catch (Exception ex)
             {
@@ -1172,6 +1196,7 @@ namespace YourExperience
             {
                 NetworkNodes.Create(treeView.SelectedNode, Clipboard.GetText());
                 treeView.SelectedNode.Expand();
+                NodesEditingHistory.Add(treeView.SelectedNode, true);
             }
             catch (Exception ex)
             {
@@ -2755,6 +2780,8 @@ namespace YourExperience
                 {
                     if (WindowsForm.Question.Show("Are you sure?", this) == DialogResult.No)
                         return;
+                    else
+                        buttonSave_Click(null, null);
                 }
                 //nếu người dùng muốn lưu current file
                 else
@@ -2765,6 +2792,7 @@ namespace YourExperience
                     {
                         NetworkNodes.SaveAll(treeView, path);
                         treeView.Nodes.Clear();
+                        textBoxContent.Clear();
                     }
                     //nếu user muốn save file nhưng lại huỷ việc chọn path
                     else
@@ -2779,6 +2807,7 @@ namespace YourExperience
                 {
                     treeView.Nodes.Clear();
                     NetworkNodes.Create(treeView, str);
+                    treeView.SelectedNode = null;
                     textBoxContent.Text = "";
                     textBoxContent.Select();
                     path = str;
@@ -2833,6 +2862,7 @@ namespace YourExperience
                 ChoosePathToSave();
                 if (!string.IsNullOrEmpty(path))
                 {
+                    buttonSave_Click(null, null);
                     NetworkNodes.SaveAll(treeView, path);
                     treeView.Nodes.Clear();
                     path = null;
@@ -2869,6 +2899,11 @@ namespace YourExperience
                 textBoxContent.SelectionFont = new Font(textBoxContent.SelectionFont.FontFamily, float.Parse(comboBoxFontSize_textBoxContent.Text), textBoxContent.SelectionFont.Style);
             else
                 textBoxContent.SelectionFont = new Font(comboBoxFont_textBoxContent.SelectedItem.ToString(), float.Parse(comboBoxFontSize_textBoxContent.Text));
+        }
+
+        private void wWToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxContent.WordWrap = !textBoxContent.WordWrap;
         }
     }
 }

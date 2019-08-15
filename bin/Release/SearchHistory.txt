@@ -46,3 +46,9 @@ web
 translate//genius
 addons
 translate//lybrary
+lười học, không muốn làm
+db.Database.SqlQuery
+loading
+https://cosmeticsinfo.org/ingredient/sodium-c12-13-pareth-sulfate
+C# la gi
+currentfolder

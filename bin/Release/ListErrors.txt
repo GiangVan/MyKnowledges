@@ -22,3 +22,57 @@ System.ArgumentException: Illegal characters in path.
    at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 35
    at YourExperience.FormMain.toolStripMenuItem6_Click(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 1151
 
+13/04/2019 23:55:49:
+System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 40
+   at YourExperience.FormMain.FormMain_Shown(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 97
+
+14/04/2019 00:13:45:
+System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 40
+   at YourExperience.FormMain.FormMain_Shown(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 97
+
+02/05/2019 11:27:24:
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Acer\Desktop\z.Ktree'.
+File name: 'C:\Users\Acer\Desktop\z.Ktree'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 35
+   at YourExperience.FormMain.FormMain_Shown(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 97
+
+02/05/2019 23:03:00:
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Acer\Desktop\z.Ktree'.
+File name: 'C:\Users\Acer\Desktop\z.Ktree'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 35
+   at YourExperience.FormMain.FormMain_Shown(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 97
+
+14/06/2019 16:22:56:
+System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 40
+   at YourExperience.FormMain.open_ToolStripMenuItem_Click(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 2787
+
+14/06/2019 16:23:04:
+System.ArgumentOutOfRangeException: Length cannot be less than zero.
+Parameter name: length
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 40
+   at YourExperience.FormMain.open_ToolStripMenuItem_Click(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 2787
+

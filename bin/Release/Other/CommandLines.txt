@@ -1,3 +1,7 @@
+bbc
+https://www.bbc.com/
+
+
 hutech
 http://daotao.hutech.edu.vn/default.aspx?page=dangnhap
 
@@ -18,16 +22,12 @@ stackoverflow
 https://stackoverflow.com/
 
 
-maps
-https://www.google.com/maps/search/
+addons
+C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
 
 
-drive
-https://drive.google.com/drive/u/0/my-drive
-
-
-translate
-https://translate.google.com/#view=home&op=translate&sl=en&tl=vi&text=
+opencurrentfolder
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release
 
 
 ted
@@ -38,12 +38,12 @@ github
 https://github.com/login
 
 
-dropbox
-https://www.dropbox.com/
-
-
 showtime
 C:\Users\Acer\Documents\Project C# .NET Applications\ShowTime\ShowTime\ShowTime.sln
+
+
+youtube
+https://www.youtube.com/results?search_query=
 
 
 download
@@ -62,16 +62,12 @@ duolingo
 https://www.duolingo.com/
 
 
-opencurrentfolder
-C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release
+dropbox
+https://www.dropbox.com/
 
 
-bbc
-https://www.bbc.com/
-
-
-tophonetics
-https://tophonetics.com/
+drive
+https://drive.google.com/drive/u/0/my-drive
 
 
 web
@@ -86,24 +82,24 @@ gmail
 https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin
 
 
-addons
-C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
-
-
-documents
-C:\Users\Acer\Documents
+translate
+https://translate.google.com/#view=home&op=translate&sl=en&tl=vi&text=
 
 
 ConsoleTest
 C:\Users\Acer\Documents\Project C# .NET Applications\ConsoleTest\ConsoleTest.sln
 
 
+documents
+C:\Users\Acer\Documents
+
+
+tophonetics
+https://tophonetics.com/
+
+
 history
 C:\Users\Acer\AppData\Local\Microsoft\Windows\History
-
-
-imagesearch
-https://www.google.com.vn/search?authuser=0&q=
 
 
 windowsformstest
@@ -114,8 +110,8 @@ email
 https://login.yahoo.com/
 
 
-youtube
-https://www.youtube.com/results?search_query=
+maps
+https://www.google.com/maps/search/
 
 
 mediafire

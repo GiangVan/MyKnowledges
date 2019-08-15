@@ -1,4 +1,4 @@
-checkBox__Start_with_windows=True
+checkBox__Start_with_windows=False
 checkBox__Automatically_minimize_when_start=True
 checkBox__Automatically_lock_the_Nodes=True
 checkBox__Show_tutorials=True
@@ -10,11 +10,11 @@ checkBox__Automatically_save_the_selected_text_of_the_node_when_transfer_to_anot
 trackBar__AutoSave=20
 button__TextBox=Segoe UI Semibold, 13pt, style=Bold
 button__TreeView=Segoe UI Semibold, 13pt, style=Bold
-Width=1448
-Height=897
+Width=1104
+Height=591
 WindowState=Normal
-LeftOfpanelMid=1083
-customColorsBox=217,6908265,6908265,6908265,6908265,6908265,6908265,12615680,6908265,6908265,6908265,6908265,6908265,6908265,32768,255,
+LeftOfpanelMid=763
+customColorsBox=217,6908265,6908265,6908265,6908265,6908265,0,12615680,6908265,6908265,6908265,6908265,6908265,6908265,32768,255,
 checkBox__Automatically_open_file_when_this_application_start=True
 radioButton__Open_the_most_recent_active_file=False
 radioButton__Open_my_chosen_file=True
