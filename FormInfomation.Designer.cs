@@ -239,7 +239,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 23;
-            this.label5.Text = "22/07/2019";
+            this.label5.Text = "15/08/2019";
             // 
             // FormInfomation
             // 

@@ -2747,7 +2747,7 @@ namespace YourExperience
         {
             WindowsForm.Setting.Show(this);
             //cập nhật lại fonts
-            if (textBoxContent.ReadOnly)
+            if (!textBoxContent.ReadOnly)
             {
                 string str = textBoxContent.Rtf;
                 textBoxContent.Font = WindowsForm.Setting.button__TextBox.Font;
