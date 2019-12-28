@@ -14,16 +14,16 @@ stackoverflow
 https://stackoverflow.com/
 
 
-maps
-https://www.google.com/maps/search/
-
-
 ted
 https://www.ted.com/talks
 
 
 github
 https://github.com/login
+
+
+youtube
+https://www.youtube.com/results?search_query=
 
 
 flaticon
@@ -74,8 +74,8 @@ email
 https://login.yahoo.com/
 
 
-youtube
-https://www.youtube.com/results?search_query=
+maps
+https://www.google.com/maps/search/
 
 
 mediafire

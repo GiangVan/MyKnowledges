@@ -159,3 +159,16 @@ File name: 'C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\
    at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 34
    at YourExperience.FormMain.FormMain_Shown(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 96
 
+11/10/2019 23:19:58:
+System.IO.FileNotFoundException: Could not find file 'C:\Users\Acer\Desktop\giang - Copy.Ktree'.
+File name: 'C:\Users\Acer\Desktop\giang - Copy.Ktree'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path, Encoding encoding)
+   at YourExperience.OtherClasses.NetworkNodes.Create(TreeView treeView, String path) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\Other Classes\NetworkNodes.cs:line 34
+   at YourExperience.FormMain.FormMain_Shown(Object sender, EventArgs e) in C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\FormMain.cs:line 96
+

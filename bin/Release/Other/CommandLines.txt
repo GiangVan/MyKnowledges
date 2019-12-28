@@ -26,10 +26,6 @@ addons
 C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2\left4dead2\addons
 
 
-opencurrentfolder
-C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release
-
-
 ted
 https://www.ted.com/talks
 
@@ -66,6 +62,10 @@ dropbox
 https://www.dropbox.com/
 
 
+facebook
+https://www.facebook.com/
+
+
 drive
 https://drive.google.com/drive/u/0/my-drive
 
@@ -74,8 +74,8 @@ web
 C:\Users\Acer\Documents\Web Applications\QuanLyVeMayBay\Airline_Management.sln
 
 
-facebook
-https://www.facebook.com/
+opencurrentfolder
+C:\Users\Acer\Documents\Project C# .NET Applications\YourExperience\YourExperience\bin\Release
 
 
 gmail

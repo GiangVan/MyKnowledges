@@ -10,10 +10,10 @@ checkBox__Automatically_save_the_selected_text_of_the_node_when_transfer_to_anot
 trackBar__AutoSave=20
 button__TextBox=Segoe UI Semibold, 13pt, style=Bold
 button__TreeView=Segoe UI Semibold, 13pt, style=Bold
-Width=1104
-Height=591
+Width=1381
+Height=830
 WindowState=Normal
-LeftOfpanelMid=763
+LeftOfpanelMid=1041
 customColorsBox=217,6908265,6908265,6908265,6908265,6908265,0,12615680,6908265,6908265,6908265,6908265,6908265,6908265,32768,255,
 checkBox__Automatically_open_file_when_this_application_start=True
 radioButton__Open_the_most_recent_active_file=False

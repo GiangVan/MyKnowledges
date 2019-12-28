@@ -50,6 +50,14 @@ namespace YourExperience.OtherClasses
             }
             WindowsForm.Loading.End();
             nodesString = null;
+            //change form's name when the nodes were loaded
+            //get path name
+            string pathName = path.Substring(0, path.LastIndexOf("."));
+            if(pathName.Contains(@"\"))
+            {
+                pathName = pathName.Substring(pathName.LastIndexOf(@"\") + 1);
+            }
+            treeView.FindForm().Text = pathName;
         }
 
         //tạo mạng nodes từ một chuỗi dữ liệu

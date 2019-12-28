@@ -15,7 +15,7 @@ namespace YourExperience
         public FormInfomation()
         {
             InitializeComponent();
-            labelVersion.Text = "v" + Application.ProductVersion + " beta";
+            labelVersion.Text = "v" + Application.ProductVersion + " alpha";
         }
 
         public void Show(Form form)
